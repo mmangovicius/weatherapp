@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlinx-serialization'
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.marius.mango.weatherapp"
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:${versions.coreKtx}"
+    implementation "androidx.appcompat:appcompat:${versions.appCompat}"
+    implementation "androidx.constraintlayout:constraintlayout:${versions.constraintlayout}"
+    implementation "androidx.lifecycle:lifecycle-extensions:${versions.lifecycle}"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycle}"
+
+    api "com.squareup.okhttp3:okhttp:${versions.okhttp}"
+    implementation "org.koin:koin-androidx-viewmodel:${versions.koin}"
+    implementation "com.squareup.retrofit2:retrofit:${versions.retrofit}"
+    implementation "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${versions.kotlinxserialization}"
+    implementation "org.jetbrains.kotlinx:kotlinx-serialization-runtime:${versions.serializationruntime}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"
+
+    api "org.junit.jupiter:junit-jupiter-api:${versions.junitJupiter}"
+    runtimeOnly "org.junit.jupiter:junit-jupiter-engine:${versions.junitJupiter}"
+    api "org.junit.jupiter:junit-jupiter-params:${versions.junitJupiter}"
+    api "com.google.truth:truth:${versions.truth}"
+    api "androidx.arch.core:core-testing:${versions.archCore}"
+    api "org.mockito:mockito-inline:${versions.mockito}"
+    api "com.nhaarman.mockitokotlin2:mockito-kotlin:${versions.mockitoKotlin}"
+    api "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
+}
