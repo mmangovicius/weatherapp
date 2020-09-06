@@ -9,7 +9,7 @@ import com.marius.mango.weatherapp.ui.citylist.domain.Weather
 import com.marius.mango.weatherapp.utils.formatDayString
 import com.marius.mango.weatherapp.utils.formatMonthString
 
-class CityWeatherInfoViewModel() : ViewModel() {
+class CityWeatherInfoViewModel : ViewModel() {
 
     private val _state = SafeLiveData(State())
     val state: LiveData<State> get() = _state

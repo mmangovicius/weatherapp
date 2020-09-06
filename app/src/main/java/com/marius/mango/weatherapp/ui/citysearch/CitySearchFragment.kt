@@ -37,7 +37,7 @@ class CitySearchFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         viewModel.state.observe(viewLifecycleOwner, Observer { state ->
             progress_bar.isVisible = state.showProgress
-            state.navigateToWeatherList?.getContentIfNotHandled()?.let { weather ->
+            state.navigateToWeatherInfo?.getContentIfNotHandled()?.let { weather ->
                 navigator.navigateToWeatherInfo(weather)
             }
             state.showTextEmptyError?.getContentIfNotHandled()?.let {
