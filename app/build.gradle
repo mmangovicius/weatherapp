@@ -83,6 +83,6 @@ dependencies {
     api "org.mockito:mockito-inline:${versions.mockito}"
     api "com.nhaarman.mockitokotlin2:mockito-kotlin:${versions.mockitoKotlin}"
     api "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
-    testImplementation "io.mockk:mockk:1.10.0"
+    testImplementation "io.mockk:mockk:${versions.mockk}"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:${versions.coroutines}"
 }
