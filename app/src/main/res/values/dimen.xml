@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="weather_card_height">190dp</dimen>
+    <dimen name="weather_card_margin">16dp</dimen>
+    <dimen name="weather_icon_size">36dp</dimen>
+    <dimen name="celsius_icon_size">20dp</dimen>
+    <dimen name="celsius_translation_y">-60dp</dimen>
+    <dimen name="temperature_translation_y">-25dp</dimen>
+    <dimen name="date_text_translation_y">-55dp</dimen>
+    <dimen name="text_size_large">126sp</dimen>
+    <dimen name="text_size_medium">20sp</dimen>
+    <dimen name="weather_card_padding">10dp</dimen>
+    <dimen name="celsius_margin">8dp</dimen>
+    <dimen name="weather_icon_translation_x">-5dp</dimen>
+</resources>

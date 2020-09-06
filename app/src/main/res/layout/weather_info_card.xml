@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/weather_card_height"
+    android:background="@drawable/weather_card_background"
+    android:padding="@dimen/weather_card_padding">
+
+    <ImageView
+        android:id="@+id/weather_info_image"
+        android:layout_width="@dimen/weather_icon_size"
+        android:layout_height="@dimen/weather_icon_size"
+        android:contentDescription="@string/weather_info_icon"
+        android:translationX="@dimen/weather_icon_translation_x"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/celcius_image"
+        android:layout_width="@dimen/celsius_icon_size"
+        android:layout_height="@dimen/celsius_icon_size"
+        android:layout_marginStart="@dimen/celsius_margin"
+        android:contentDescription="@string/celsius_icon"
+        android:src="@drawable/celsius_background"
+        android:translationY="@dimen/celsius_translation_y"
+        app:layout_constraintBottom_toTopOf="@+id/temp_text"
+        app:layout_constraintStart_toEndOf="@+id/temp_text"
+        app:layout_constraintTop_toBottomOf="@+id/temp_text" />
+
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintBottom_toBottomOf="@+id/weather_info_image"
+        app:layout_constraintStart_toEndOf="@id/weather_info_image"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/temp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_large"
+        android:translationY="@dimen/temperature_translation_y"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/description_text" />
+
+    <TextView
+        android:id="@+id/city_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_medium"
+        android:translationY="-55dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp_text" />
+
+    <TextView
+        android:id="@+id/day_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_medium"
+        android:translationY="@dimen/date_text_translation_y"
+        app:layout_constraintBottom_toTopOf="@+id/month_text"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/month_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/text_size_medium"
+        android:translationY="@dimen/date_text_translation_y"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/day_text"
+        app:layout_constraintTop_toBottomOf="@+id/temp_text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
