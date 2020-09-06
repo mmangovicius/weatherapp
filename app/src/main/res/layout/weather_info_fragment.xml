@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/app_background"
-    tools:context=".ui.citylist.CityWeatherInfoFragment">
+    tools:context=".ui.weatherinfo.CityWeatherInfoFragment">
 
     <ImageButton
         android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@color/colorGreen"
+        android:contentDescription="@string/back_button"
         android:rotation="180"
         android:scaleX="0.5"
         android:scaleY="0.5"

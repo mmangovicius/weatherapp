@@ -1,4 +1,4 @@
-package com.marius.mango.weatherapp.ui.citylist
+package com.marius.mango.weatherapp.ui.weatherinfo
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import coil.api.load
 import com.marius.mango.weatherapp.Navigator
 import com.marius.mango.weatherapp.R
-import com.marius.mango.weatherapp.ui.citylist.domain.Weather
+import com.marius.mango.weatherapp.ui.weatherinfo.domain.Weather
 import com.marius.mango.weatherapp.utils.arg
 import kotlinx.android.synthetic.main.weather_info_card.*
 import kotlinx.android.synthetic.main.weather_info_fragment.*

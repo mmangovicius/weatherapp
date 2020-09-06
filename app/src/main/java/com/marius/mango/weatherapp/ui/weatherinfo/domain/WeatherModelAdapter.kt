@@ -1,6 +1,6 @@
-package com.marius.mango.weatherapp.ui.citylist.domain
+package com.marius.mango.weatherapp.ui.weatherinfo.domain
 
-import com.marius.mango.weatherapp.ui.citylist.response.WeatherResponse
+import com.marius.mango.weatherapp.ui.weatherinfo.response.WeatherResponse
 import java.util.*
 
 fun WeatherResponse.toDomainModel() =

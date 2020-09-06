@@ -1,4 +1,4 @@
-package com.marius.mango.weatherapp.ui.citylist.response
+package com.marius.mango.weatherapp.ui.weatherinfo.response
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass

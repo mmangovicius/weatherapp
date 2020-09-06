@@ -4,8 +4,8 @@ import com.marius.mango.weatherapp.Constants.API_KEY
 import com.marius.mango.weatherapp.api.Result
 import com.marius.mango.weatherapp.api.WeatherApi
 import com.marius.mango.weatherapp.api.apiCall
-import com.marius.mango.weatherapp.ui.citylist.domain.toDomainModel
-import com.marius.mango.weatherapp.ui.citylist.response.WeatherResponse
+import com.marius.mango.weatherapp.ui.weatherinfo.domain.toDomainModel
+import com.marius.mango.weatherapp.ui.weatherinfo.response.WeatherResponse
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.withContext
 

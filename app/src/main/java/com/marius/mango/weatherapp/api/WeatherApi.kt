@@ -1,6 +1,6 @@
 package com.marius.mango.weatherapp.api
 
-import com.marius.mango.weatherapp.ui.citylist.response.WeatherResponse
+import com.marius.mango.weatherapp.ui.weatherinfo.response.WeatherResponse
 import kotlinx.coroutines.Deferred
 import retrofit2.http.GET
 import retrofit2.http.Query

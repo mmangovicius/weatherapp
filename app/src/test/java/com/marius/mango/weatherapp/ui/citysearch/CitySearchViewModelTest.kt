@@ -2,7 +2,7 @@ package com.marius.mango.weatherapp.ui.citysearch
 
 import com.google.common.truth.Truth.assertThat
 import com.marius.mango.weatherapp.Event
-import com.marius.mango.weatherapp.ui.citylist.domain.Weather
+import com.marius.mango.weatherapp.ui.weatherinfo.domain.Weather
 import com.marius.mango.weatherapp.ui.citysearch.domain.ValidateCityNameUseCase
 import com.marius.mango.weatherapp.ui.citysearch.domain.ValidateCityNameUseCase.Result
 import com.marius.mango.weatherapp.ui.citysearch.domain.WeatherApiRepository

@@ -1,4 +1,4 @@
-package com.marius.mango.weatherapp.ui.citylist.domain
+package com.marius.mango.weatherapp.ui.weatherinfo.domain
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
