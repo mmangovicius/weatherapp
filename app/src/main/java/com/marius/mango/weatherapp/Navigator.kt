@@ -2,8 +2,8 @@ package com.marius.mango.weatherapp
 
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
-import com.marius.mango.weatherapp.ui.citylist.CityWeatherInfoFragment
-import com.marius.mango.weatherapp.ui.citylist.domain.Weather
+import com.marius.mango.weatherapp.ui.weatherinfo.CityWeatherInfoFragment
+import com.marius.mango.weatherapp.ui.weatherinfo.domain.Weather
 import com.marius.mango.weatherapp.ui.citysearch.CitySearchFragment
 
 class Navigator {

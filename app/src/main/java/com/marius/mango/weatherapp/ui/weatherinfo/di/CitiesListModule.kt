@@ -1,6 +1,6 @@
-package com.marius.mango.weatherapp.ui.citylist.di
+package com.marius.mango.weatherapp.ui.weatherinfo.di
 
-import com.marius.mango.weatherapp.ui.citylist.CityWeatherInfoViewModel
+import com.marius.mango.weatherapp.ui.weatherinfo.CityWeatherInfoViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

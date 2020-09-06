@@ -1,6 +1,6 @@
 package com.marius.mango.weatherapp.ui.citysearch.domain
 
-import com.marius.mango.weatherapp.ui.citylist.domain.Weather
+import com.marius.mango.weatherapp.ui.weatherinfo.domain.Weather
 import kotlinx.coroutines.CoroutineScope
 
 interface WeatherApiRepository {

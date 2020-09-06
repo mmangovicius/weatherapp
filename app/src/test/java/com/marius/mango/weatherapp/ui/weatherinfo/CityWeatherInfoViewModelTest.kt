@@ -1,8 +1,8 @@
-package com.marius.mango.weatherapp.ui.citylist
+package com.marius.mango.weatherapp.ui.weatherinfo
 
 import com.google.common.truth.Truth.assertThat
 import com.marius.mango.weatherapp.Event
-import com.marius.mango.weatherapp.ui.citylist.domain.Weather
+import com.marius.mango.weatherapp.ui.weatherinfo.domain.Weather
 import com.marius.mango.weatherapp.utils.InstantExecutableExtension
 import com.marius.mango.weatherapp.utils.LastValueObserver
 import kotlinx.coroutines.ExperimentalCoroutinesApi

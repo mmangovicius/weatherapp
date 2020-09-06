@@ -1,11 +1,11 @@
-package com.marius.mango.weatherapp.ui.citylist
+package com.marius.mango.weatherapp.ui.weatherinfo
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import com.marius.mango.weatherapp.Event
 import com.marius.mango.weatherapp.SafeLiveData
 import com.marius.mango.weatherapp.SimpleEvent
-import com.marius.mango.weatherapp.ui.citylist.domain.Weather
+import com.marius.mango.weatherapp.ui.weatherinfo.domain.Weather
 import com.marius.mango.weatherapp.utils.formatDayString
 import com.marius.mango.weatherapp.utils.formatMonthString
 
