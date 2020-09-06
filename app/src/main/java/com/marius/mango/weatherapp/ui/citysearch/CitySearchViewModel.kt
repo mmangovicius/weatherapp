@@ -38,7 +38,7 @@ class CitySearchViewModel(
             when (result) {
                 is WeatherApiRepository.Result.Success -> {
                     _state.value = _state.value.copy(
-                        navigateToWeatherList = Event(result.weather)
+                        navigateToWeatherInfo = Event(result.weather)
                     )
                 }
                 is WeatherApiRepository.Result.Error ->
@@ -49,7 +49,7 @@ class CitySearchViewModel(
     }
 
     data class State(
-        val navigateToWeatherList: Event<Weather>? = null,
+        val navigateToWeatherInfo: Event<Weather>? = null,
         val showTextEmptyError: SimpleEvent? = null,
         val showCityNotFoundError: SimpleEvent? = null,
         val showProgress: Boolean = false
