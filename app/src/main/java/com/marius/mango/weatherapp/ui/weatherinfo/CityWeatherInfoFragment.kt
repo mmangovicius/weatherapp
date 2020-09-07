@@ -16,21 +16,22 @@ import kotlinx.android.synthetic.main.weather_info_card.*
 import kotlinx.android.synthetic.main.weather_info_fragment.*
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.parameter.parametersOf
 
 class CityWeatherInfoFragment : Fragment() {
 
-    private val viewModel: CityWeatherInfoViewModel by viewModel()
+
+    private val weather: Weather by arg(ARG_WEATHER)
+
+    private val viewModel: CityWeatherInfoViewModel by viewModel { parametersOf(weather) }
 
     private val navigator: Navigator by inject()
-
-    private val cityName: Weather by arg(ARG_CITY_NAME)
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.weather_info_fragment, container, false)
-    }
+    ): View = inflater.inflate(R.layout.weather_info_fragment, container, false)
+
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -50,14 +51,13 @@ class CityWeatherInfoFragment : Fragment() {
         back_button.setOnClickListener {
             viewModel.onBackClicked()
         }
-        viewModel.showCityWeatherInfo(cityName)
     }
 
     companion object {
-        private const val ARG_CITY_NAME = "weather"
+        private const val ARG_WEATHER = "weather"
 
         fun newInstance(weather: Weather) = CityWeatherInfoFragment().apply {
-            arguments = bundleOf(ARG_CITY_NAME to weather)
+            arguments = bundleOf(ARG_WEATHER to weather)
         }
     }
 }

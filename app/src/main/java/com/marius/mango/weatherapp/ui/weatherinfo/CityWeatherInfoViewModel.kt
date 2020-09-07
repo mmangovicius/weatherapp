@@ -9,12 +9,12 @@ import com.marius.mango.weatherapp.ui.weatherinfo.domain.Weather
 import com.marius.mango.weatherapp.utils.formatDayString
 import com.marius.mango.weatherapp.utils.formatMonthString
 
-class CityWeatherInfoViewModel : ViewModel() {
+class CityWeatherInfoViewModel(weather: Weather) : ViewModel() {
 
     private val _state = SafeLiveData(State())
     val state: LiveData<State> get() = _state
 
-    fun showCityWeatherInfo(weather: Weather) {
+    init {
         _state.value = _state.value.copy(
             name = weather.cityName,
             description = weather.description.capitalize(),
@@ -24,7 +24,6 @@ class CityWeatherInfoViewModel : ViewModel() {
             maxTemperature = weather.temperatureMax,
             day = weather.date.formatDayString(),
             month = weather.date.formatMonthString()
-
         )
     }
 

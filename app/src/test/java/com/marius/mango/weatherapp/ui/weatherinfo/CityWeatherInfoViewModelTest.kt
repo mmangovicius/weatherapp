@@ -19,56 +19,30 @@ class CityWeatherInfoViewModelTest {
     private lateinit var viewModel: CityWeatherInfoViewModel
     private val last = LastValueObserver<CityWeatherInfoViewModel.State>()
 
+    private val name = "vilnius"
+    private val description = "description"
+    private val temperature = "20"
+    private val iconId = "id"
+    private val date = Date(0)
+
     @BeforeEach
     fun setUp() {
-        viewModel = CityWeatherInfoViewModel()
+        viewModel = CityWeatherInfoViewModel(
+            Weather(
+                description = description,
+                iconId = iconId,
+                temperature = temperature,
+                temperatureMax = "22",
+                temperatureMin = "19",
+                date = date,
+                cityName = name
+            )
+        )
         viewModel.state.observeForever(last)
     }
 
     @Nested
-    inner class OnInit {
-
-        @Test
-        fun loadsInitialState() {
-            assertThat(last.value).isEqualTo(
-                CityWeatherInfoViewModel.State(
-                    name = "",
-                    description = "",
-                    iconId = null,
-                    temperature = "",
-                    minTemperature = "",
-                    maxTemperature = "",
-                    day = "",
-                    month = "",
-                    goBack = null
-                )
-            )
-        }
-    }
-
-    @Nested
     inner class OnShowCityWeatherInfo {
-
-        private val name = "vilnius"
-        private val description = "description"
-        private val temperature = "20"
-        private val iconId = "id"
-        private val date = Date(0)
-
-        @BeforeEach
-        fun setUp() {
-            viewModel.showCityWeatherInfo(
-                Weather(
-                    description = description,
-                    iconId = iconId,
-                    temperature = temperature,
-                    temperatureMax = "22",
-                    temperatureMin = "19",
-                    date = date,
-                    cityName = name
-                )
-            )
-        }
 
         @Test
         fun emitsName() {
