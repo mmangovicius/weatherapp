@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="weather_icon_uri">http://openweathermap.org/img/wn/%1$s@2x.png</string>
+    <string name="edit_text_hint">ENTER CITY NAME</string>
+    <string name="city_not_found_toast">City Not Found. Try Again</string>
+    <string name="text_is_empty_toast">Please Enter The City Name</string>
 </resources>

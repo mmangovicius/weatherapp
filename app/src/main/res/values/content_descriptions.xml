@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_logo">app logo</string>
+    <string name="search_button">search city weather info</string>
+    <string name="weather_info_icon">weather icon</string>
+    <string name="back_button">back button</string>
+    <string name="celsius_icon">celsius icon</string>
+</resources>
