@@ -67,7 +67,7 @@ class CitySearchViewModelTest {
                     validateCityNameUseCase.invoke("vilnius")
                 } returns Result.Success
                 coEvery {
-                    weatherApiRepository.getWeatherFor(any(), any())
+                    weatherApiRepository.getWeatherFor(any())
                 } returns Error(java.lang.Exception())
                 viewModel.showCityWeather("vilnius")
             }
@@ -108,7 +108,7 @@ class CitySearchViewModelTest {
                     validateCityNameUseCase.invoke("vilnius")
                 } returns Result.Success
                 coEvery {
-                    weatherApiRepository.getWeatherFor(any(), any())
+                    weatherApiRepository.getWeatherFor(any())
                 } returns Success(weather)
                 viewModel.showCityWeather("vilnius")
             }

@@ -6,23 +6,19 @@ import com.marius.mango.weatherapp.api.WeatherApi
 import com.marius.mango.weatherapp.api.apiCall
 import com.marius.mango.weatherapp.ui.weatherinfo.domain.toDomainModel
 import com.marius.mango.weatherapp.ui.weatherinfo.response.WeatherResponse
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.withContext
 
 private const val UNITS = "metric"
 
-class WeatherRepository(private val weatherApi: WeatherApi) :
-    WeatherApiRepository {
+class WeatherRepository
+    (
+    private val weatherApi: WeatherApi
+) : WeatherApiRepository {
 
     override suspend fun getWeatherFor(
-        city: String,
-        scope: CoroutineScope
-    ): WeatherApiRepository.Result =
-        withContext(scope.coroutineContext) {
-            handleResult(apiCall(weatherApi) {
-                cityWeather(city, UNITS, API_KEY)
-            })
-        }
+        city: String
+    ): WeatherApiRepository.Result = handleResult(apiCall(weatherApi) {
+        cityWeather(city, UNITS, API_KEY)
+    })
 
     private fun handleResult(
         result: Result<WeatherResponse>

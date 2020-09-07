@@ -6,9 +6,9 @@ import androidx.lifecycle.viewModelScope
 import com.marius.mango.weatherapp.Event
 import com.marius.mango.weatherapp.SafeLiveData
 import com.marius.mango.weatherapp.SimpleEvent
-import com.marius.mango.weatherapp.ui.weatherinfo.domain.Weather
 import com.marius.mango.weatherapp.ui.citysearch.domain.ValidateCityNameUseCase
 import com.marius.mango.weatherapp.ui.citysearch.domain.WeatherApiRepository
+import com.marius.mango.weatherapp.ui.weatherinfo.domain.Weather
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
@@ -33,7 +33,7 @@ class CitySearchViewModel(
         viewModelScope.launch {
             _state.value = _state.value.copy(showProgress = true)
             val result = withContext(viewModelScope.coroutineContext) {
-                weatherApiRepository.getWeatherFor(cityName, viewModelScope)
+                weatherApiRepository.getWeatherFor(cityName)
             }
             when (result) {
                 is WeatherApiRepository.Result.Success -> {

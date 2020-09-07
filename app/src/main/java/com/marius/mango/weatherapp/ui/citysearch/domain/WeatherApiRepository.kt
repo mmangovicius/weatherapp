@@ -5,7 +5,7 @@ import kotlinx.coroutines.CoroutineScope
 
 interface WeatherApiRepository {
 
-    suspend fun getWeatherFor(city: String, scope: CoroutineScope): Result
+    suspend fun getWeatherFor(city: String): Result
 
     sealed class Result {
 
